@@ -1,0 +1,13 @@
+#people-list {
+  width: 200px;
+  border-right: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+  height: 400px;
+}
+
+.person-entry {
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+}
