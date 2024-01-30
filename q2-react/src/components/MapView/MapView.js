@@ -23,11 +23,18 @@ const MapView = ({ person }) => {
 
                 const map = L.map('map').setView([lat, lng], 13)
 
+                const icon = L.icon({
+                    iconUrl: 'http://localhost:3000/marker-icon-2x.png',
+                    iconSize: [100, 100],
+                    iconAnchor: [100, 100],
+                });
+
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: 'contributor',
                 }).addTo(map)
 
-                L.marker([lat, lng]).addTo(map)
+
+                L.marker([lat, lng], { icon: icon }).addTo(map)
 
                 return () => {
                     map.remove()

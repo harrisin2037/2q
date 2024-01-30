@@ -10,7 +10,14 @@ const PeopleList = ({ people, onPersonClick }) => {
                     className="person-entry"
                     onClick={() => onPersonClick(person)}
                 >
-                    {person.name.first} {person.name.last}
+                    <img
+                        src={person.picture}
+                        alt={`${person.name.first} ${person.name.last}`}
+                        className="person-image"
+                    />
+                    <div className="person-name">
+                        {person.name.first} {person.name.last}
+                    </div>
                 </div>
             ))}
         </div>
